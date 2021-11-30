@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor del Conocimiento IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container-fluid" id="top">
+    <h1>Gestor del Conocimiento RDF Y OWL</h1>
+</div>
+<div class="container mt-3">
+    <br>
+    <!-- Nav pills -->
+    <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="pill" href="#home">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#menu1">Librería</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#menu2">Subir Archivo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#menu3">Usuario</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+            <h3>Inico</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+            <div class="row">
+                <div class="col-2">
+                    <h3>Librería</h3>
+                </div>
+                <div class="col-6">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                </div>
+                <div class="col-2">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            Ordenar por
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Nombre del Objeto de Aprendizaje</a></li>
+                            <li><a class="dropdown-item" href="#">Tema</a></li>
+                            <li><a class="dropdown-item" href="#">Nombre del Archivo</a></li>
+                            <li><a class="dropdown-item" href="#">Fecha</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="container mt-3">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Tema</th>
+                                <th>Materia</th>
+                                <th>Nombre</th>
+                                <th>Fecha</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Vision Artificial</td>
+                                <td>Inteligencia Artificial</td>
+                                <td>visionArti.zip
+                                <td>27-11-21</td>
+                            </tr>
+                            <tr>
+                                <td>MongoDB</td>
+                                <td>Inteligencia Artificia</td>
+                                <td>mongoBD.zip</td>
+                                <td>28-11-21</td>
+                            </tr>
+                            <tr>
+                                <td>RDF y OWL</td>
+                                <td>Inteligencia Artificial</td>
+                                <td>rdfowl.zip</td>
+                                <td>29-11-21</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Objeto de aprendizaje</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-floating mb-3 mt-3">
+
+                        <input type="text" class="form-control" id="noa" placeholder="Añade un nombre" name="noa">
+                        <label for="noa">Nombre de Objeto de Aprendizaje</label>
+                    </div>
+
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="tag" placeholder="Añade una etiqueta" name="tag">
+                        <label for="tag">Etiqueta / Tema</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" id="desc" name="text" placeholder="Añade una descripción"></textarea>
+                        <label for="desc">Descripción</label>
+                    </div>
+
+                    <button type="button" class="btn mt-3 bg-primary">Subir</button><br>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="menu3" class="container tab-pane fade"><br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width:200px">
+                        <img class="card-img-top" src="foto.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Profesor X</h4>
+                            <p class="card-text">Academico del ITSX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="btn-group-vertical" id="but">
+                        <button type="button" class="btn mt-3 bg-primary">Cambiar Contraseña</button><br>
+                        <button type="button" class="btn mt-3 bg-primary">Cambiar foto de perfil</button><br>
+                        <button type="button" class="btn mt-3 bg-primary">Cerrar Sesión</button><br>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
