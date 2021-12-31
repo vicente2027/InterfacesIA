@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="http://rdf.js.org/comunica-browser/versions/1/packages/actor-init-sparql/comunica-browser.js"></script>
+  <script language="JavaScript">
+      Comunica.newEngine().query('PREFIX mydb: <http://mydb.org/>\n' +
+          'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n' +
+          'PREFIX schema: <http://schema.org/>\n' +
+          '\n' +
+          'SELECT ?name ?note\n' +
+          'WHERE\n' +
+          '{ ?s rdfs:label ?name ;\n' +
+          ' mydb:note ?note .\n' +
+          '}',
+          { sources: [ { type: 'hypermedia', value: 'https://ia-test-4639e.web.app/test.ttl' } ] })
+          .then(function (result) {
+              result.bindingsStream.on('data', function (data) {
+                  // Each variable binding is an RDFJS term
+                  document.getElementById("test").innerHTML = data.get('?s').value + ' ' + data.get('?p').value + ' ' + data.get('?o').value;
+              });
+          });
+  </script>
+</head>
+<body>
+<p id="test"> </p>
+</body>
+</html>
