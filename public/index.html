@@ -1,89 +1,187 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor del Conocimiento IA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.6.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.6.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.6.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyAY-uIrQJx8rK2wUjpM7PZxx4N5AKN5I-s",
+        authDomain: "ia-test-4639e.firebaseapp.com",
+        projectId: "ia-test-4639e",
+        storageBucket: "ia-test-4639e.appspot.com",
+        messagingSenderId: "49100665195",
+        appId: "1:49100665195:web:9342d454a036ebb846dc2e",
+        measurementId: "G-FBNEQ5MRDT"
+    };
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+<div class="container-fluid" id="top">
+    <h1>Gestor del Conocimiento RDF Y OWL</h1>
+</div>
+<div class="container mt-3">
+    <br>
+    <!-- Nav pills -->
+    <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="pill" href="#home">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#menu1">Librería</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#menu2">Subir Archivo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#menu3">Usuario</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+            <h3>Inico</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+            <div class="row">
+                <div class="col-2">
+                    <h3>Librería</h3>
+                </div>
+                <div class="col-6">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                </div>
+                <div class="col-2">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            Ordenar por
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Nombre del Objeto de Aprendizaje</a></li>
+                            <li><a class="dropdown-item" href="#">Tema</a></li>
+                            <li><a class="dropdown-item" href="#">Nombre del Archivo</a></li>
+                            <li><a class="dropdown-item" href="#">Fecha</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="container mt-3">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Tema</th>
+                                <th>Materia</th>
+                                <th>Nombre</th>
+                                <th>Fecha</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Vision Artificial</td>
+                                <td>Inteligencia Artificial</td>
+                                <td>visionArti.zip
+                                <td>27-11-21</td>
+                            </tr>
+                            <tr>
+                                <td>MongoDB</td>
+                                <td>Inteligencia Artificia</td>
+                                <td>mongoBD.zip</td>
+                                <td>28-11-21</td>
+                            </tr>
+                            <tr>
+                                <td>RDF y OWL</td>
+                                <td>Inteligencia Artificial</td>
+                                <td>rdfowl.zip</td>
+                                <td>29-11-21</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Objeto de aprendizaje</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-floating mb-3 mt-3">
+
+                        <input type="text" class="form-control" id="noa" placeholder="Añade un nombre" name="noa">
+                        <label for="noa">Nombre de Objeto de Aprendizaje</label>
+                    </div>
+
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="tag" placeholder="Añade una etiqueta" name="tag">
+                        <label for="tag">Etiqueta / Tema</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" id="desc" name="text" placeholder="Añade una descripción"></textarea>
+                        <label for="desc">Descripción</label>
+                    </div>
+
+                    <button type="button" class="btn mt-3 bg-primary">Subir</button><br>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="menu3" class="container tab-pane fade"><br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width:200px">
+                        <img class="card-img-top" src="foto.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Profesor X</h4>
+                            <p class="card-text">Academico del ITSX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="btn-group-vertical" id="but">
+                        <button type="button" class="btn mt-3 bg-primary">Cambiar Contraseña</button><br>
+                        <button type="button" class="btn mt-3 bg-primary">Cambiar foto de perfil</button><br>
+                        <button type="button" class="btn mt-3 bg-primary">Cerrar Sesión</button><br>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+</body>
 </html>
