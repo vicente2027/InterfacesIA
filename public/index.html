@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
@@ -33,7 +34,45 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
 </script>
-<script src="connect.js"></script>
+<!--
+<script type="module">
+    const { MongoClient } = require('mongodb');
+    const uri = "mongodb+srv://vicente:87654321@cluster0.2pdmy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+    async function run() {
+        try {
+            await client.connect();
+            console.log("Connected correctly to server");
+            const db = client.db("test");
+            // Use the collection "people"
+            const col = db.collection("objetosAprendizaje");
+            // Construct a document
+            let objeto = {
+                "nombreObjeto": 'ia.zip',
+                "tema": 'IA',
+                "materia": 'Inteligencia Artificial',
+                "descripcion": 'Prueba',
+                "usuario": 'uploader',
+                "ruta" : '/firebase/bucket'
+
+            }
+            // Insert a single document, wait for promise so we can read it back
+            const p = await col.insertOne(objeto);
+            // Find one document
+            const myDoc = await col.findOne();
+            // Print to the console
+            console.log(myDoc);
+        } catch (err) {
+            console.log(err.stack);
+        }
+
+        finally {
+            await client.close();
+        }
+    }
+    run().catch(console.dir);</script>-->
+
 <div class="container-fluid" id="top">
     <h1>Gestor del Conocimiento RDF Y OWL</h1>
 </div>
@@ -161,7 +200,7 @@
             <div class="row">
                 <div class="col-3">
                     <div class="card" style="width:200px">
-                        <img class="card-img-top" src="foto.jpg" alt="Card image">
+                        <img class="card-img-top" src="p.png" alt="Card image">
                         <div class="card-body">
                             <h4 class="card-title">Profesor X</h4>
                             <p class="card-text">Academico del ITSX</p>
